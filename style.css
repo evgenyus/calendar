@@ -1,0 +1,82 @@
+html {
+  	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+#header {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 0;
+}
+
+#calendar {
+	
+	min-width: 700px;
+	max-width: 1600px;
+	overflow: hidden;
+	width: 100%;
+}
+
+#calendar tbody {
+	border: 1px solid #ddd;
+}
+
+#calendar tr td {
+	height: 1.5em;
+	position: relative;
+}
+
+#calendar tr td.current {
+	background-color: rgb(252, 248, 227);
+}
+
+#calendar .time-cell {
+	padding: 0 5px;
+	text-align: right;
+	width: 1em;
+}
+
+#calendar .full {
+	border-top: 1px solid #ddd;
+}
+
+#calendar .half {
+	border-top: 1px dotted #ddd;
+}
+
+#calendar td {
+	border-right: 1px solid #ddd;
+}
+
+.event {
+	background-color: rgba(59, 145, 173, 0.75);
+	border-color: #3b91ad;
+	border-radius: 5px;
+	color: white;
+	left: 0;
+	min-height: 1.5em;
+	overflow: hidden;
+	padding: 3px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.event.overlap {
+	width: 50%;
+}
+
+.event.overlap:last-child {
+	border-left: 1px solid white;
+	left: auto;
+	right: 0;
+}
